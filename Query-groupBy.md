@@ -13,3 +13,11 @@ JOIN
 1- SELECT \* FROM `degrees` JOIN `students` ON `students`.degree_id = `degrees`.id WHERE `degrees`.name LIKE 'Corso di Laurea in Economia';
 
 2- SELECT \* FROM `departments` JOIN `degrees`.deparments_id = `departments`.id WHERE `departments`.name LIKE `%Neuroscienze`
+
+3- SELECT \* FROM `teachers` JOIN `course_teacher` ON `course_teacher`.teacher_id = `teachers`.id WHERE `course_teacher`.teacher_id LIKE 44
+
+4- SELECT `students`.surname, `students`.name, `degrees`.name, `degrees`.level, `degrees`.email, `degrees`.website, `departments`.name FROM `students` JOIN `degrees` ON `students`.degree_id = `degrees`.id JOIN `departments` ON `degrees`.department_id = `departments`.id ORDER BY `students`.surname, `students`.name
+
+5- SELECT `degrees`.name, `courses`.name, `teachers`.name, `teachers`.surname FROM `degrees` JOIN `courses` ON `degrees`.id = `courses`.degree_id JOIN `course_teacher` ON `course_teacher`.course_id = `courses`.id JOIN `teachers` ON `teachers`.id = `course_teacher`.teacher_id ORDER BY `degrees`.name
+
+6- SELECT DISTINCT `teachers`.name, `teachers`.surname, `departments`.name FROM `teachers` JOIN `course_teacher` ON `teachers`.id = `course_teacher`.teacher_id JOIN `courses` ON `course_teacher`.course_id = `courses`.id JOIN `degrees` ON `courses`.degree_id = `degrees`.id JOIN `departments` ON `degrees`.department_id = `departments`.id WHERE `departments`.name = 'Dipartimento di Matematica'\
