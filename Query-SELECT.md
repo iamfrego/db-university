@@ -13,5 +13,3 @@
 7 - SELECT COUNT(`id`) FROM `departments`;
 
 8 - SELECT COUNT(`id`) FROM `teachers` WHERE phone IS NULL;
-
-### PER QUALCHE MOTIVO MI AGGIUNGE DA SOLO GLI / DAVANTI AGLI `*`
