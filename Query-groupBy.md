@@ -5,3 +5,5 @@ GROUP BY
 2- SELECT COUNT(`id`), `office_address` FROM `teachers`GROUP BY `office_address`;
 
 3- SELECT `exam_id`, AVG(`vote`) FROM `exam_student` GROUP BY `exam_id`;
+
+4- SELECT `department_id`, COUNT(`department_id`) FROM `degrees` GROUP BY `department_id`;
