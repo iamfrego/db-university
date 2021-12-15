@@ -8,8 +8,6 @@ GROUP BY
 
 4- SELECT department_id, COUNT(department_id) FROM degrees GROUP BY department_id;
 
-Join
-
 JOIN
 
 1- SELECT \* FROM degrees JOIN students ON students.degree_id = degrees.id WHERE degrees.name LIKE 'Corso di Laurea in Economia';
@@ -24,6 +22,6 @@ JOIN
 
 6- SELECT DISTINCT teachers.name, teachers.surname, departments.name FROM teachers JOIN course_teacher ON teachers.id = course_teacher.teacher_id JOIN courses ON course_teacher.course_id = courses.id JOIN degrees ON courses.degree_id = degrees.id JOIN departments ON degrees.department_id = departments.id WHERE departments.name = 'Dipartimento di Matematica'\
 
-7- SELECT DISTINCT teachers.name AS teacher_name, teachers.surname AS teacher_surname, departments.name AS department_name FROM teachers JOIN course_teacher ON teachers.id = course_teacher.teacher_id JOIN courses ON course_teacher.course_id = courses.id JOIN degrees ON courses.degree_id = degrees.id JOIN departments ON degrees.department_id = departments.id WHERE departments.name = 'Dipartimento di Matematica';
+7- SELECT DISTINCT teachers.name , teachers.surname , departments.nameFROM teachers JOIN course_teacher ON teachers.id = course_teacher.teacher_id JOIN courses ON course_teacher.course_id = courses.id JOIN degrees ON courses.degree_id = degrees.id JOIN departments ON degrees.department_id = departments.id WHERE departments.name = 'Dipartimento di Matematica';
 
 8- SELECT COUNT(exams.id), students.name, students.surname, courses.name FROM students JOIN exam_student ON students.id = exam_student.student_id JOIN exams ON exams.id = exam_student.exam_id JOIN courses ON courses.id = exams.course_id GROUP BY exam_student.student_id, exams.course_id;
